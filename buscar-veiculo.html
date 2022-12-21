@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Veiculo</title>
+
+    <script src="buscarVeiculo.js"></script>
+</head>
+<body>
+
+    <form onsubmit="buscaVeiculo()">
+        <label for="parametro">Escolha parâmetro da busca</label> <br>
+        <select name="" id="parametro">
+            <option value=""></option>
+            <option value="modelo">Modelo</option>
+            <option value="cor">Cor</option>
+            <option value="ano">Ano</option>
+            <option value="placa">Placa</option>
+        </select> <br><br>
+
+        <label for="valor">Informe a cor, placa, ano ou modelo do carro</label> <br>
+        <input type="text" id="valor"> <br><br>
+
+        <button type="submit">Buscar</button>
+    </form>
+    
+</body>
+</html>
