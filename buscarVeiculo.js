@@ -61,6 +61,7 @@ function pegarJson()
       }
     };
     
-    xmlhttp.open("GET", "http://localhost/api-veiculos/App/view/carrosBusca.json", true);
+    xmlhttp.open("GET", "http://localhost/api-veiculos/App/view/exibir-busca.php", true);
     xmlhttp.send();
+    //document.location.reload(false);
 }

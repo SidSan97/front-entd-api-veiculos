@@ -34,5 +34,6 @@ var xmlhttp = new XMLHttpRequest();
       }
     };
     
-    xmlhttp.open("GET", "http://localhost/api-veiculos/testes/teste.php", true);
+    xmlhttp.open("GET", "http://localhost/api-veiculos/App/view/carrosBusca.json", true);
     xmlhttp.send();
+    //document.location.reload(false);
