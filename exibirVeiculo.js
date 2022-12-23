@@ -1,4 +1,72 @@
-var xmlhttp = new XMLHttpRequest();
+function enviaDados()
+{
+  const ul = document.getElementById('tabela');
+  const list = document.createDocumentFragment();
+  const url = 'http://localhost/api-veiculos/index.php?q=pesquisarTudo';
+
+  fetch(url)
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      let authors = data;
+
+      authors.map(function(author) {
+        let li = document.createElement('li');
+        let name = document.createElement('h2');
+        let email = document.createElement('span');
+
+        name.innerHTML = `${author.modelo}`;
+        email.innerHTML = `${author.cor}`;
+
+        li.appendChild(name);
+        li.appendChild(email);
+        list.appendChild(li);
+      });
+    })
+    .catch(function(error) {
+      console.log(error);
+    });
+
+  ul.appendChild(list);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
         var cliente = JSON.parse(this.responseText); 
@@ -35,4 +103,4 @@ var xmlhttp = new XMLHttpRequest();
     };
     
     xmlhttp.open("GET", "http://localhost/api-veiculos/testes/teste.php", true);
-    xmlhttp.send();
+    xmlhttp.send();*/
