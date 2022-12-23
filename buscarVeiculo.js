@@ -39,6 +39,9 @@ function fazRequisicao(body)
             return textTable;
         }
       }
+      else {
+        document.getElementById("tabela").innerHTML = '<p color="red">Busca sem resultados</p>';
+      }
     }
 }
 
