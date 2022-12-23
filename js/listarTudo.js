@@ -4,7 +4,7 @@ var xmlhttp = new XMLHttpRequest();
         var cliente = JSON.parse(this.responseText); 
 
         document.getElementById("tabela").innerHTML = `
-        <table>
+        <table class="table">
             <tr>
                 <th>Modelo</th>
                 <th>Cor</th>

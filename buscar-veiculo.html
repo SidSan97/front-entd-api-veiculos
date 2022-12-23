@@ -14,27 +14,37 @@
 
 <body>
 
-    <form onsubmit="enviaDadosVeiculo()">
-        <label for="parametro">Escolha parâmetro da busca</label> <br>
-        <select name="" id="parametro">
-            <option value=""></option>
-            <option value="modelo">Modelo</option>
-            <option value="cor">Cor</option>
-            <option value="ano">Ano</option>
-            <option value="placa">Placa</option>
-        </select> <br><br>
+    <div class="container">
+        <div class="classeForm">
+            <h3 class="mt-3">Informe dados do veiculo que você procura</h3> <br>
 
-        <label for="valor">Informe a cor, placa, ano ou modelo do carro</label> <br>
-        <input type="text" id="valor"> <br><br>
-
-        <button type="submit">Buscar</button>
-    </form>
-	
-	<br>
-	
-	<div id="tabela">
-		
-	</div>
+            <form onsubmit="enviaDadosVeiculo()">
+                <div class="form-group">
+                    <label for="parametro">Escolha parâmetro da busca</label> 
+                    <select name="" id="parametro" class="form-control">
+                        <option value=""></option>
+                        <option value="modelo">Modelo</option>
+                        <option value="cor">Cor</option>
+                        <option value="ano">Ano</option>
+                        <option value="placa">Placa</option>
+                    </select> 
+                </div>
+    
+                <div class="form-group">
+                    <label for="valor">Informe a cor, placa, ano ou modelo do carro</label> 
+                    <input type="text" id="valor" class="form-control"> 
+                </div>
+        
+                <button type="submit" class="btn btn-primary">Buscar</button> 
+            </form>
+            
+            <button class="btn btn-warning"><a href="index.html" class="text-dark">Voltar</a></button>
+        </div>
+        
+        <div id="tabela">
+            
+        </div>
+    </div>
     
     <!-- Bootstrap -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
